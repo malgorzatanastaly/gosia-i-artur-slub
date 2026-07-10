@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gosia &amp; Artur — 17.10.2026r.</title>
+<meta name="description" content="Impreza z okazji ślubu Gosi i Artura, 17 października 2026, Salonty, ul. Kościuszki 14, Wrocław">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --parchment: #F1EDE2;
+    --parchment-deep: #E7E0CE;
+    --ink: #24291F;
+    --pine: #2F3E2E;
+    --pine-soft: #4B5C46;
+    --gold: #A98A4E;
+    --wine: #6B3F3F;
+    --party: #E2574C;
+    --line: rgba(47,62,46,0.18);
+    --display: 'Cormorant Garamond', serif;
+    --body: 'Karla', sans-serif;
+    --maxw: 720px;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    background:var(--parchment);
+    color:var(--ink);
+    font-family:var(--body);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *, *::before, *::after{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+  }
+
+  a{ color:inherit; }
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  section{ padding:88px 0; }
+  section + section{ border-top:1px solid var(--line); }
+
+  .eyebrow{
+    font-family:var(--body);
+    font-size:12px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--pine-soft);
+    margin:0 0 18px;
+  }
+
+  h1,h2{
+    font-family:var(--display);
+    font-weight:500;
+    margin:0;
+    color:var(--pine);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    padding:64px 28px;
+    border-top:none;
+  }
+
+  .mill{
+    width:56px; height:56px;
+    margin-bottom:28px;
+    animation:turn 40s linear infinite;
+  }
+  @keyframes turn{ to{ transform:rotate(360deg); } }
+
+  .hero h1{
+    font-size:clamp(48px, 10vw, 92px);
+    line-height:1;
+    letter-spacing:0.01em;
+  }
+  .hero .amp{
+    display:block;
+    font-style:italic;
+    color:var(--gold);
+    font-size:0.5em;
+    margin:6px 0;
+  }
+
+  .hero .date{
+    margin-top:26px;
+    font-family:var(--body);
+    font-size:14px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--pine-soft);
+  }
+  .hero .date strong{ color:var(--wine); font-weight:600; }
+
+  .wheat-divider{
+    width:120px;
+    height:20px;
+    margin:34px 0;
+    opacity:0.7;
+  }
+
+  .hero .venue{
+    font-family:var(--display);
+    font-style:italic;
+    font-size:22px;
+    color:var(--ink);
+  }
+
+  .scroll-hint{
+    position:absolute;
+    bottom:32px;
+    font-size:11px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--pine-soft);
+    opacity:0.7;
+  }
+
+  /* ---------- PHOTO ---------- */
+  .photo-section{ text-align:center; }
+  .frame{
+    max-width:420px;
+    margin:0 auto;
+    padding:14px;
+    background:#fff;
+    box-shadow:0 18px 40px -22px rgba(36,41,31,0.45);
+    border:1px solid var(--line);
+  }
+  .frame img{
+    display:block;
+    width:100%;
+    aspect-ratio: 4 / 5;
+    object-fit:cover;
+  }
+  .frame .placeholder{
+    width:100%;
+    aspect-ratio: 4 / 5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--parchment-deep);
+    color:var(--pine-soft);
+    font-family:var(--body);
+    font-size:13px;
+    text-align:center;
+    padding:24px;
+  }
+  .photo-caption{
+    margin-top:22px;
+    font-family:var(--display);
+    font-style:italic;
+    font-size:19px;
+    color:var(--pine-soft);
+  }
+
+  /* ---------- LOCATION ---------- */
+  .location h2{ font-size:38px; margin-bottom:8px; }
+  .location .addr{
+    font-size:17px;
+    margin:18px 0 6px;
+  }
+  .location .addr strong{ color:var(--pine); }
+  .location .hours{
+    font-size:14px;
+    color:var(--pine-soft);
+    margin-bottom:30px;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 28px;
+    background:var(--pine);
+    color:var(--parchment);
+    text-decoration:none;
+    font-family:var(--body);
+    font-weight:600;
+    font-size:14px;
+    letter-spacing:0.04em;
+    border:1px solid var(--pine);
+    transition:background 0.25s ease, color 0.25s ease, transform 0.15s ease;
+  }
+  .btn:hover{ background:transparent; color:var(--pine); transform:translateY(-1px); }
+  .btn.wine{ background:var(--party); border-color:var(--party); }
+  .btn.wine:hover{ background:transparent; color:var(--party); }
+
+  /* ---------- ATRAKCJE ---------- */
+  .attractions h2{ font-size:38px; margin-bottom:8px; }
+  .attr-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+  }
+  .attr-card{
+    padding:26px 22px;
+    background:#fff;
+    border:1px solid var(--line);
+    box-shadow:0 12px 30px -22px rgba(36,41,31,0.35);
+  }
+  .attr-icon{
+    width:34px; height:34px;
+    margin-bottom:14px;
+    color:var(--party);
+  }
+  .attr-card h3{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:22px;
+    margin:0 0 8px;
+    color:var(--pine);
+  }
+  .attr-card p{
+    margin:0;
+    font-size:14.5px;
+    color:var(--pine-soft);
+  }
+  .attr-card.wide{ grid-column:1 / -1; }
+  .spotify-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-top:12px;
+    font-size:13px;
+    font-weight:600;
+    color:var(--party);
+    text-decoration:none;
+    border-bottom:1px solid var(--party);
+  }
+  @media (max-width:560px){
+    .attr-grid{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- RSVP ---------- */
+  .rsvp{ text-align:center; }
+  .rsvp h2{ font-size:38px; }
+  .rsvp p{ max-width:440px; margin:16px auto 34px; color:var(--pine-soft); font-size:15px; }
+  .rsvp .deadline{
+    margin-top:24px;
+    font-size:13px;
+    letter-spacing:0.06em;
+    color:var(--wine);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    text-align:center;
+    padding:48px 0 64px;
+    font-family:var(--display);
+    font-style:italic;
+    font-size:20px;
+    color:var(--pine-soft);
+  }
+
+  :focus-visible{
+    outline:2px solid var(--wine);
+    outline-offset:3px;
+  }
+
+  @media (max-width:520px){
+    section{ padding:64px 0; }
+    .hero{ padding:48px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <svg class="mill" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="50" cy="50" r="46" fill="#24291F"/>
+    <circle cx="50" cy="50" r="46" fill="none" stroke="#A98A4E" stroke-width="1" stroke-dasharray="2 4"/>
+    <circle cx="50" cy="50" r="34" fill="none" stroke="#3d453a" stroke-width="1"/>
+    <circle cx="50" cy="50" r="24" fill="none" stroke="#3d453a" stroke-width="1"/>
+    <circle cx="50" cy="50" r="14" fill="#E2574C"/>
+    <circle cx="50" cy="50" r="4" fill="#F1EDE2"/>
+  </svg>
+
+  <p class="eyebrow" style="margin-bottom:6px;">After Ślub Party</p>
+  <h1>Gosia<span class="amp">&amp;</span>Artur</h1>
+
+  <svg class="wheat-divider" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <line x1="0" y1="10" x2="120" y2="10" stroke="#A98A4E" stroke-width="1"/>
+    <g fill="#E2574C">
+      <circle cx="52" cy="10" r="2.4"/>
+      <circle cx="60" cy="7" r="2.8"/>
+      <circle cx="68" cy="10" r="2.4"/>
+    </g>
+  </svg>
+
+  <p class="date">Bawimy się <strong>17 października 2026</strong>, 19:00 – 1:00</p>
+  <p class="venue">Salonty, Wrocław</p>
+
+  <span class="scroll-hint">przewiń w dół ↓</span>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="location">
+  <div class="wrap">
+    <p class="eyebrow">Gdzie się bawimy</p>
+    <h2>Salonty</h2>
+    <p class="addr"><strong>ul. Kościuszki 14</strong><br>Wrocław</p>
+    <p class="hours">17 października 2026 · 19:00 – 1:00 w nocy</p>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Salonty+ul.+Ko%C5%9Bciuszki+14+Wroc%C5%82aw" target="_blank" rel="noopener">
+      Otwórz w Google Maps →
+    </a>
+  </div>
+</section>
+
+<!-- ============ ATRAKCJE ============ -->
+<section class="attractions">
+  <div class="wrap">
+    <p class="eyebrow">Na co możecie liczyć</p>
+    <h2>Atrakcje wieczoru</h2>
+    <div class="attr-grid">
+
+      <div class="attr-card">
+        <svg class="attr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 21l4-4 4 4M9 3a5 5 0 0110 0v3a5 5 0 01-10 0V3zM5 3a2 2 0 00-2 2v2a4 4 0 004 4M19 3a2 2 0 012 2v2a4 4 0 01-4 4"/></svg>
+        <h3>Wspólna zabawa</h3>
+        <p>Będzie okazja, żeby pobyć razem, porozmawiać i po prostu dobrze spędzić czas.</p>
+      </div>
+
+      <div class="attr-card">
+        <svg class="attr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 2v7a4 4 0 004 4v9M7 2v9M11 2v9M17 2a4 4 0 00-4 4v3h4M15 22V9"/></svg>
+        <h3>Jedzenie i napoje</h3>
+        <p>Na miejscu będzie jedzenie oraz napoje alkoholowe i bezalkoholowe.</p>
+      </div>
+
+      <div class="attr-card">
+        <svg class="attr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg>
+        <h3>Tańce do playlisty Spotify</h3>
+        <p>Muzyka poleci z naszej wspólnej playlisty — możecie dorzucić do niej swoją ulubioną piosenkę.</p>
+        <a class="spotify-link" href="https://open.spotify.com/playlist/2YqyGCoPiqn92RTTNvD4Fc?si=9Y0gQFhkRIqn_BIVaCqq-g&utm_source=copy-link&pi=hFGz0pKGSEy9J&pt=acc3586e1755e413079c0d300dd7c6d1" target="_blank" rel="noopener">Otwórz playlistę →</a>
+      </div>
+
+      <div class="attr-card">
+        <svg class="attr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="1"/><circle cx="8" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="14" cy="10" r="1.6" fill="currentColor" stroke="none"/><circle cx="17" cy="14" r="1.6" fill="currentColor" stroke="none"/></svg>
+        <h3>Bilard</h3>
+        <p>Na miejscu będzie też stół bilardowy, dla chętnych do gry.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ RSVP ============ -->
+<section class="rsvp">
+  <div class="wrap">
+    <p class="eyebrow">Potwierdzenie obecności</p>
+    <h2>Wpadasz?</h2>
+    <p>Dajcie nam znać, czy możemy na Was liczyć — potwierdźcie obecność do <strong>30 września 2026</strong>.</p>
+    <a class="btn wine" href="https://forms.gle/LAbmGaPvRr9Y1ERD6" target="_blank" rel="noopener">
+      Wypełnij formularz RSVP →
+    </a>
+  </div>
+</section>
+
+<!-- ============ PHOTO ============ -->
+<section class="photo-section">
+  <div class="wrap">
+    <p class="photo-caption">🎉 Nie możemy się doczekać, aby świętować ten dzień razem z Wami 🎉</p>
+    <div class="frame">
+      <div class="placeholder">
+        <img src="photo1.jpeg"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  Do zobaczenia 17.10.2026 🎉🎱
+</footer>
+
+</body>
+</html>
