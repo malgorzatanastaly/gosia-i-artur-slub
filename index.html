@@ -174,7 +174,19 @@
     color:var(--pine-soft);
   }
 
+  /* ---------- INVITE NOTE ---------- */
+  .invite-note{ text-align:center; }
+  .invite-note h2{ font-size:34px; margin-bottom:20px; }
+  .invite-note p{
+    max-width:480px;
+    margin:0 auto;
+    font-size:15.5px;
+    color:var(--pine-soft);
+  }
+  .invite-note p + p{ margin-top:14px; }
+
   /* ---------- LOCATION ---------- */
+  .location{ text-align:center; }
   .location h2{ font-size:38px; margin-bottom:8px; }
   .location .addr{
     font-size:17px;
@@ -207,6 +219,7 @@
   .btn.wine:hover{ background:transparent; color:var(--party); }
 
   /* ---------- ATRAKCJE ---------- */
+  .attractions{text-align:center;}
   .attractions h2{ font-size:38px; margin-bottom:8px; }
   .attr-grid{
     margin-top:40px;
@@ -267,11 +280,17 @@
   /* ---------- FOOTER ---------- */
   footer{
     text-align:center;
-    padding:48px 0 64px;
+    padding:24px 0 64px;
     font-family:var(--display);
     font-style:italic;
-    font-size:20px;
+    font-size:28px;
     color:var(--pine-soft);
+  }
+
+  footer .footer-divider{
+    display:block;
+    margin:0 auto 14px;
+    opacity:0.7;
   }
 
   :focus-visible{
@@ -310,7 +329,7 @@
     </g>
   </svg>
 
-  <p class="date">Bawimy się <strong>17 października 2026</strong>, 19:00 – 1:00</p>
+  <p class="date"><strong>17 października 2026</strong>, 19:00 – 1:00</p>
 
   <span class="scroll-hint">przewiń w dół ↓</span>
 </section>
@@ -397,11 +416,16 @@
     </div>
   </div>
 </section>
-
-
 <footer>
+  <svg class="wheat-divider footer-divider" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <line x1="0" y1="10" x2="120" y2="10" stroke="#A98A4E" stroke-width="1"/>
+    <g fill="#E2574C">
+      <circle cx="52" cy="10" r="2.4"/>
+      <circle cx="60" cy="7" r="2.8"/>
+      <circle cx="68" cy="10" r="2.4"/>
+    </g>
+  </svg>
   Do zobaczenia 17.10.2026 🎉🎱
 </footer>
-
 </body>
 </html>
